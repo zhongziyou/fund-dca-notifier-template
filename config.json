@@ -1,0 +1,92 @@
+{
+  "email": {
+    "smtp": { "host": "smtp.qq.com", "port": 465 },
+    "user": "your_qq_email@qq.com",
+    "to": "your_qq_email@qq.com",
+    "password": ""
+  },
+  "funds": [
+    {
+      "code": "008114",
+      "name": "天弘中证红利低波",
+      "valuation_method": "dividend_pb",
+      "valuation_index": "CSIH30269",
+      "cost_price": 1.0,
+      "shares": 10000,
+      "per_period": 500,
+      "dca_frequency": "每周四",
+      "dca_schedule": { "type": "weekly", "weekday": 3 },
+      "tranche_amount": 2000
+    },
+    {
+      "code": "007721",
+      "name": "天弘标普500",
+      "valuation_method": "percentile",
+      "valuation_index": "SP500",
+      "cost_price": 1.0,
+      "shares": 10000,
+      "per_period": 100,
+      "dca_frequency": "每日",
+      "dca_schedule": { "type": "daily" },
+      "tranche_amount": 1000
+    },
+    {
+      "code": "016453",
+      "name": "南方纳斯达克100",
+      "valuation_method": "percentile",
+      "valuation_index": "NDX",
+      "cost_price": 1.0,
+      "shares": 10000,
+      "per_period": 100,
+      "dca_frequency": "每日",
+      "dca_schedule": { "type": "daily" },
+      "tranche_amount": 1000
+    },
+    {
+      "code": "tiaa001002",
+      "name": "海外长钱（雪球投顾）",
+      "manual": true,
+      "amount": 50000,
+      "cost_amount": 50000,
+      "per_period": 2000,
+      "dca_frequency": "每月",
+      "dca_schedule": { "type": "monthly", "day": 1 },
+      "tranche_amount": 2000
+    }
+  ],
+  "portfolio": {
+    "stable_amount": 100000,
+    "gold_amount": 10000,
+    "monthly_surplus": 10000,
+    "monthly_dca": 5000
+  },
+  "strategy": {
+    "dip_alert_pct": -0.02,
+    "calibration_day": 1,
+    "dividend_pb": {
+      "buy_when_yield": 0.045,
+      "normal_yield_low": 0.04,
+      "high_yield": 0.035,
+      "buy_pb": 0.85,
+      "normal_pb_high": 1.0,
+      "high_pb": 1.2,
+      "deep_low_yield": 0.05,
+      "deep_low_pb": 0.8
+    },
+    "funding": {
+      "low_add": 500,
+      "deep_low_add": 1000,
+      "deep_low_lump_low": 20000,
+      "deep_low_lump_high": 30000,
+      "deep_low_months": 3
+    },
+    "fx": {
+      "years": 3,
+      "extreme_pct": 0.05
+    },
+    "portfolio": {
+      "equity_high_pct": 0.60,
+      "equity_low_pct": 0.25
+    }
+  }
+}
